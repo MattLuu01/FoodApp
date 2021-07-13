@@ -1,0 +1,53 @@
+
+
+    
+    <div class='row mb-5 pl-3'>
+        <div class='col-8'>
+            <h3>Address List</h3>
+            <button 
+                type='button' 
+                 class="btn btn-outline-success btn-sm mt-1"
+                 routerLink="/address"
+                >
+                Add New Address
+            </button>
+            <div class='row mt-5' >
+                <div 
+                    appColor
+                    class="col-sm-12 col-md-6 col-lg-3" 
+                    *ngFor="let address of allAddressesOfUser"
+                    >
+                    <div class="card">      
+                    
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-between">
+                                <div class="">Address</div>
+                                <div class="">{{address.name}} </div>
+                            </div>
+                            <div class="mt-1 row d-flex flex-row justify-content-between">
+                                <div class="small text-muted">
+                                   {{address.address}}
+                                </div>
+                                <div class="small">
+                                    <button 
+                                        type='button' 
+                                        class="btn btn-outline-success btn-sm mt-1"
+                                        routerLink="/editaddress/{{address.id}}">
+                                        Edit
+                                    </button>
+                                </div>
+                                <div class="small">
+                                    <button 
+                                        type='button' 
+                                        class="btn btn-danger btn-sm mt-1"
+                                        (click)="deleteAddress(address)">
+                                        Delete
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>

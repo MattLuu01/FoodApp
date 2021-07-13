@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'FoodOrb';
-}
+  userLoggedIn:boolean | undefined;
+  checkLoggedIn(loggedIn: boolean | undefined)
+  {
+    this.userLoggedIn = loggedIn;
+  }
+  
+  constructor(private router: Router){}
+
+
+    }
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="!email && !password">
+    <a class="navbar-brand">Food Delivery</a>
+    <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <div class="col"></div>
+        <div>
+        <form class="float-right form-inline my-2 my-lg-0 "
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="/login">Login</a>
+          
+          <a class="nav-link" routerLink="/register">Register</a>
+        </form>
+        </div>
+      </div>
+  </nav>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="email && password">
+    <a class="navbar-brand" routerLink="/feed">Food Delivery</a>
+    <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <div class="col"></div>
+        <div>
+        <form class="float-right form-inline my-2 my-lg-0 "
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{exact: true}">
+          <a class="nav-link" routerLink="/cart">Cart</a>
+          
+          <div id="drop" class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{user.name}}
+            </button>
+            <div class="dropdown-menu dropdown-menu-left" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item nav-link" routerLink="/orderstatus" >TrackOrder</a>
+              <a class="dropdown-item nav-link" routerLink="/userdetails" >Profile</a> <!--(click)="getUser()"-->
+              <a class="dropdown-item nav-link" routerLink="/settings">Settings</a>
+              <a class="dropdown-item nav-link" (click)="logout()">Logout</a>
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+  </nav>
+  

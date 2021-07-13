@@ -1,0 +1,52 @@
+
+<h3>Contents of your cart</h3>
+<h5>Total Amount: USD</h5>
+<table class="table" >
+    <thead >
+    <tr>
+        <th>Sr. No</th>
+        <th>Order</th>
+        <th>Cost</th>
+    </tr> 
+</thead >
+    <tbody *ngFor="let item of cart; let i = index">
+        <tr>
+        
+        <td>{{i+1}}</td>
+        <td>{{item.foodName}}</td>
+        <td>$ {{item.cost}}</td>
+        
+        </tr>
+        
+    </tbody>
+    <tfoot>
+        <tr>
+          <td>Total</td>
+          <td></td>
+          <td>$ {{total}}</td>
+        </tr>
+      </tfoot>
+    
+</table>
+<div class="row">
+    <div class="small">
+        <button 
+            type='button' 
+            class="btn btn-primary mt-2"
+            routerLink="/orderstatus"
+            (click)="placeOrder()"
+            >
+            Place Order
+        </button>
+    </div>
+    <div class="small">
+        <button 
+            type='button' 
+            class="btn btn-outline-info mt-2"
+            routerLink="/feed"
+            >
+            Home
+        </button>
+    </div>
+</div>
+

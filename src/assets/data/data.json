@@ -1,0 +1,258 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "userEmail": "mattluu@gmail.com",
+      "userPassword": "mluu",
+      "name": "Matthew Luu",
+      "phoneNumber": "123 456 7890",
+      "profession": "Software Engineer",
+      "interests": [
+        "Biryani",
+        "Ice-Cream",
+        "Dosa"
+      ]
+    },
+    {
+      "id": 2,
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "name": "John Frank",
+      "phoneNumber": "202 236 3354",
+      "profession": "Help Desk Technician",
+      "interests": [
+        "Toast",
+        "Pizza",
+        "Fish"
+      ]
+    },
+    {
+      "id": 3,
+      "userEmail": "georgiepker@hotmail.com",
+      "userPassword": "hunter2",
+      "name": "George Packer",
+      "phoneNumber": "123 456 7890",
+      "profession": "Retail Worker",
+      "interests": [
+        "Red",
+        "Blue",
+        "Yellow"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Test",
+      "userPassword": "testing",
+      "userEmail": "test@gmail.com",
+      "phoneNumber": "",
+      "profession": "",
+      "interests": [
+        "Biryani",
+        "Ice-Cream",
+        "Dosa"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Dusty James",
+      "userPassword": "hunter35",
+      "userEmail": "djames@hotmail.com",
+      "phoneNumber": "",
+      "profession": "",
+      "interests": []
+    },
+    {
+      "id": 6,
+      "name": "Forgotten",
+      "userPassword": "iforgotpass",
+      "userEmail": "forget@gmail.com",
+      "phoneNumber": "",
+      "profession": "",
+      "interests": []
+    }
+  ],
+  "foods": [
+    {
+      "id": 1,
+      "restaurantName": "Ang Sool",
+      "description": "Korean, Restaurant",
+      "rating": 3.5,
+      "cost": 12.5,
+      "foodName": "Korean Grilled Chicken",
+      "foodImage": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+      "id": 2,
+      "restaurantName": "Jack's Steak House",
+      "description": "Dine-in, Restaurant",
+      "rating": 3.2,
+      "cost": 13.99,
+      "foodName": "Filet Mignon",
+      "foodImage": "https://images.unsplash.com/photo-1588347785102-2944ba63d0c3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+    },
+    {
+      "id": 3,
+      "restaurantName": "Yi Zhang's Place",
+      "description": "Chinese, Restaurant",
+      "rating": 4.5,
+      "cost": 11.25,
+      "foodName": "Siu Yuk",
+      "foodImage": "https://images.unsplash.com/photo-1523986490752-c28064f26be3?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+    }
+  ],
+  "authusers": [
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 1
+    },
+    {
+      "userEmail": "mattluu@gmail.com",
+      "userPassword": "mluu",
+      "id": 2
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 3
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 4
+    },
+    {
+      "userEmail": "mattluu@gmail.com",
+      "userPassword": "mluu",
+      "id": 5
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 6
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 7
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 8
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 9
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 10
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 11
+    },
+    {
+      "userEmail": "test@gmail.com",
+      "userPassword": "testing",
+      "id": 12
+    },
+    {
+      "userEmail": "test@gmail.com",
+      "userPassword": "testing",
+      "id": 13
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 14
+    },
+    {
+      "userEmail": "forget@gmail.com",
+      "userPassword": "iforgotpass",
+      "id": 15
+    },
+    {
+      "userEmail": "mattluu@gmail.com",
+      "userPassword": "mluu",
+      "id": 16
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 17
+    },
+    {
+      "userEmail": "djames@hotmail.com",
+      "userPassword": "hunter35",
+      "id": 18
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 19
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 20
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 21
+    },
+    {
+      "userEmail": "jfrank@gmail.com",
+      "userPassword": "jfrank",
+      "id": 22
+    }
+  ],
+  "addresses": [
+    {
+      "id": 1,
+      "email": "mattluu@gmail.com",
+      "name": "Matthew Luu",
+      "address": "102 Letsgo Road, Florida"
+    },
+    {
+      "id": 2,
+      "email": "mattluu@gmail.com",
+      "name": "Matthew Luu",
+      "address": "1326 Lemons Ave, Georgia"
+    },
+    {
+      "id": 3,
+      "email": "jfrank@gmail.com",
+      "name": "John Frank",
+      "address": "12134 Jacob Lane, Manhattan, NY"
+    }
+  ],
+  "cards": [
+    {
+      "id": 1,
+      "email": "mattluu@gmail.com",
+      "name": "Matthew Luu",
+      "cardNumber": 321645698,
+      "company": "Discover"
+    },
+    {
+      "id": 2,
+      "email": "mattluu@gmail.com",
+      "name": "Matthew Luu",
+      "company": "Chase",
+      "cardNumber": "12364557"
+    },
+    {
+      "id": 3,
+      "email": "jfrank@gmail.com",
+      "name": "John Frank",
+      "company": "BBT",
+      "cardNumber": "123654897"
+    }
+  ]
+}

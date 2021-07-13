@@ -1,0 +1,71 @@
+
+
+<div class="d-flex justify-content-center">
+    
+    <div class="card m-3" id="maincard">
+    <div class="form-group card-header"><h5>
+        Registration </h5></div>
+    
+    <div class="card-body">
+    <form [formGroup]="registerForm" (ngSubmit)= "onSubmit()">
+    
+<div class="form-group row">
+<div class ="col">
+    <label>Name</label>
+</div>
+<input type="text" formControlName="name" 
+class="form-control col"
+[ngClass]="{ 'is-invalid': submitted && f.name.invalid }"
+/>
+ <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+     <div *ngIf="f.name.errors?.required">Full Name is required and must be a valid name</div>
+</div> 
+</div>
+
+<div class="form-group row">
+    <div class ="col">
+    <label>E-mail Address</label>
+    </div> 
+<input type="text" formControlName="email" class="form-control col"
+[ngClass]="{ 'is-invalid': submitted && f.email.invalid }" 
+>
+<div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+    <div *ngIf="f.email.errors?.required">Email is required</div>
+    <div *ngIf="f.email.errors?.email">Enter a valid email address e.g. john@example.com</div>
+</div>
+</div>
+
+<div class="form-group row">
+    <div class="col">
+        <label>Password</label>
+    </div> 
+    <input type="password" formControlName="password" class="form-control col"
+    [ngClass]="{ 'is-invalid': submitted && f.password.invalid }" >
+     <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+        <div *ngIf="f.password.errors?.required">Password is required</div>
+        <div *ngIf="f.password.errors?.minlength">Password must be at least 6 characters</div>
+    </div> 
+    </div>
+
+<div class="form-group row">
+    <div class="col">
+        <label>Confirm Password</label>
+    </div>
+<input type="password" formControlName="confirmPassword" class="form-control col" 
+[ngClass]="{ 'is-invalid': submitted && f.confirmPassword.invalid }" >
+<div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+    <div *ngIf="f.confirmPassword.errors?.required">Confirm Password is required</div>
+    <div *ngIf="registerForm.get('confirmPassword')?.errors && 
+    registerForm.get('confirmPassword')?.errors?.ConfirmPassword">Passwords Mismatch</div>
+</div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-primary mr-1">Register</button>
+</div>
+</form>
+</div>
+</div>
+</div> 
+
+

@@ -1,0 +1,105 @@
+
+<div class="form-outline row d-flex justify-content-center mt-2 mb-2">
+    <input type="search" id="form1" class="col-md-6 form-control w-50 p-3" placeholder="Search Food Items"
+    aria-label="Search" [(ngModel)]='searchString' (keyup)='filterFoods()' />
+  </div>
+
+    <div class='row mb-5 pl-5'>
+        <div class='col-8'>
+            <div class='row mt-5'>
+                <div 
+                    appColor
+                    class="col-sm-12 col-md-6 col-lg-3" 
+                    *ngFor='let food of allFoods'
+                    >
+                    <div class="card">                 
+                        <img class="card-img-top"
+                            [src]= "food.foodImage"
+                            alt="image"/>
+                    
+                        <div class="card-body">
+                            <div class="row d-flex justify-content-between">
+                                <div class="">{{food.restaurantName}}</div>
+                            </div>
+                            <div class="mt-1 row d-flex flex-row justify-content-between">
+                                <div class="small text-muted">
+                                   {{food.description}} | Rating: {{food.rating}} | ${{food.cost}} 
+                                   
+                                </div>
+                            </div>
+                            <div class="row d-flex justify-content-between">
+                              {{food.foodName}}
+                          </div>
+                            <div class="row d-flex justify-content-between">
+                              <div class="small">
+                                <button 
+                                    type='button' 
+                                    class="btn btn-primary btn-sm mt-2"
+                                    data-toggle="modal" 
+                                    data-target="#exampleModal"
+                                     (click)="onClick(food,food.foodName, food.cost) ; " 
+                                    >
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="small">
+                                <button 
+                                    type='button' 
+                                    class="btn btn-primary btn-sm mt-2"
+                                    routerLink="/orderstatus"
+                                    (click)="placeOrder()"
+                                    >
+                                    Buy/ Order
+                                </button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+       <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Are your sure you want to add this item to cart?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <p>Add order to cart?</p>
+                <p>Order Id: </p>
+                <p>{{thisFood.foodName}} | ${{thisFood.cost}} </p>
+                <p>Click on Add to Cart to proceed further </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div>  -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Are your sure you want to add this item to cart?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                <p>Add order to cart?</p>
+                <p>Order Id: </p>
+                {{foodName}} | ${{foodPrice}}
+                <p>Click on Add to Cart to proceed further </p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" (click)="addFood(thisFood)" data-dismiss="modal" >Add to Cart</button>
+                </div>
+              </div>
+            </div>
+          </div> 

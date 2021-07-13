@@ -1,0 +1,44 @@
+
+
+<div class="d-flex justify-content-center">
+    
+    <div class="card m-3" id="maincard">
+    <div class="form-group card-header"><h5>
+        Login </h5></div>
+    
+    <div class="card-body">
+    <form [formGroup]="loginForm" (ngSubmit)= "onSubmit()">
+
+
+<div class="form-group row">
+    <div class ="col">
+    <label>E-mail Address</label>
+    </div> 
+<input type="text" formControlName="email" class="form-control col"
+>
+</div>
+
+<div class="form-group row">
+    <div class="col">
+        <label>Password</label>
+    </div> 
+    <input type="password" formControlName="password" class="form-control col"
+    >
+    </div>
+ <div id="rm" class="form-group form-check text-center">
+        <input type="checkbox" formControlName="rememberMe"
+        id="rememberMe" class="form-check-input">
+       <label for="rememberMe" class="form-check-label"> Remember Me </label>
+</div>
+
+<div class="text-center row" 
+routerLinkActive="active"
+[routerLinkActiveOptions]="{exact: true}">
+    <div class="col"></div>
+    <button class="btn btn-primary mr-1 col-sm">Login</button>
+    <a class="nav-link col" routerLink="/forgotpassword">Forgot Your Password?</a>
+</div>
+</form>
+</div>
+</div>
+</div>
